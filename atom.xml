@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>荒川河</title>
+  
+  <subtitle>MasterLuo</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/masterluozhi/masterluozhi.github.io.git/"/>
+  <updated>2021-03-08T02:53:24.009Z</updated>
+  <id>https://github.com/masterluozhi/masterluozhi.github.io.git/</id>
+  
+  <author>
+    <name>罗三</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021的感悟</title>
+    <link href="https://github.com/masterluozhi/masterluozhi.github.io.git/2021/03/08/2021-de-gan-wu/"/>
+    <id>https://github.com/masterluozhi/masterluozhi.github.io.git/2021/03/08/2021-de-gan-wu/</id>
+    <published>2021-03-08T02:46:56.093Z</published>
+    <updated>2021-03-08T02:53:24.009Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;十三岁的我冷眼看着返乡的年长兄辈们坐在板凳面对老人们的喋喋不休，还显稚气的面庞上难堪的躲避眼神，说些世俗的话，救命般地看向我，挂着勉强的笑容，我知道他将说些什么于是头也不回的离开酒桌，返回家中。&lt;/p&gt;
+&lt;p&gt;夏天打着赤膊涌在街道大声叫骂的少年们已经不在了，尽管也是学着大人
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
