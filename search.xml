@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>”jbnc-上“</title>
+      <link href="/2021/03/11/jbnc-shang/"/>
+      <url>/2021/03/11/jbnc-shang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="jbnc即是通过java操纵数据库的操作"><a href="#jbnc即是通过java操纵数据库的操作" class="headerlink" title="jbnc即是通过java操纵数据库的操作"></a>jbnc即是通过java操纵数据库的操作</h2><h2 id="操作代码：一，连接数据库"><a href="#操作代码：一，连接数据库" class="headerlink" title="操作代码：一，连接数据库"></a>操作代码：一，连接数据库</h2><p>1，//寻找驱动</p><p>​      Driver driver = new com.mysql.jdbc.Driver();</p><p>2， //匹配数据库</p><p>​       String  url =  “jdbc:mysql://127.0.0.1:3306/company“；</p><p>​        String name = “root”；</p><p>​       String password=“520nanasai”；</p><p>3，//注册驱动–mysql会自动注册，但为保险加入</p><p>​       DriverManager.registerDriver(drive);<br> 4   //获取连接<br>​        Connection conn = DriverManager.getConnection(url, name, password);<br>​        System.out.println(conn);<br>}</p><h2 id="改进连接数据库方法"><a href="#改进连接数据库方法" class="headerlink" title="改进连接数据库方法"></a>改进连接数据库方法</h2><p>​    //不使用第三方api  com.mysql.jdbc.Driver();</p><p>1，//使用放射取得driver实现类对象</p><pre><code>Classclazz=Class.forName(&quot;com.mysql.jdbc.Driver&quot;)Driver drive = (Driver) clazz.newInstance()</code></pre><p>2，//使用//使用drivermanager代替driver</p><pre><code>//获取连接Connection conn = DriverManager.getConnection(url, name, password);System.out.println(conn);</code></pre><p>3，//使用配置文件Properties封装匹配数据库的操作</p><pre><code>Properties properties;InputStream is =  MysqlCon.class.getClassLoader().getResourceAsStream(&quot;jdbc.Properties&quot;); properties = new Properties();  properties.load(is);</code></pre><h2 id="二，预编译sql语句放回pre视力"><a href="#二，预编译sql语句放回pre视力" class="headerlink" title="二，预编译sql语句放回pre视力"></a>二，预编译sql语句放回pre视力</h2><pre><code>String sql = &quot;INSERT INTO worker values(?,?)&quot;;//占位符prepareStatement优势防止sql注入preparedStatement = conn.prepareStatement(sql);  preparedStatement.setInt(1, 5);preparedStatement.setInt(2, 5);preparedStatement.execute();preparedStatement.close();conn.close();</code></pre><h2 id="三，通用方法"><a href="#三，通用方法" class="headerlink" title="三，通用方法"></a>三，通用方法</h2><p>public class Query{</p><p>@Test</p><p>public void test（）throws Exception{</p><p>1，//连接数据库</p><p>Connection conn = Utils.getConnerction（）；</p><p>2，///预编译</p><p>String sql  = ”String sql = “INSERT INTO worker values(?,?)”；</p><p>preparedStatement = conn.prepareStatement(sql); </p><p>3，//执行并放回结果查询专用</p><p>ResultSet rs = ps.executeQuery；</p><p>if（rs.next（）}{//判断是否有值有则执行</p><p>int id = rs.getInt（）；</p><p>int age = rs.getInt（）；</p><p>}</p><p>4，//显示返回数据 创建类对象对应表中对象</p><p>Customer cust = new Customer（id，age）；</p><p>System .out.println（cust）</p><p>5，//关闭资源</p><p>ps.close（）；</p><p>conn.close（）；</p><p>rs.close（）；</p><p>}</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2021的感悟</title>
       <link href="/2021/03/08/2021-de-gan-wu/"/>
       <url>/2021/03/08/2021-de-gan-wu/</url>
